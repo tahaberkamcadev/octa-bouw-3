@@ -11338,12 +11338,12 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .portfolio-thumbnail {
-  width: 100%; /* Görsel genişliği kapsayıcıya göre ayarlanır */
+  width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9; /* Tüm görseller aynı oranı korur */
-  object-fit: cover; /* Görseli orantılı kırpar ve alana sığdırır */
-  display: block; /* Blok öğesi olarak görünür */
-  margin: 0 auto; /* Ortala */
+  aspect-ratio: 16 / 12;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 
