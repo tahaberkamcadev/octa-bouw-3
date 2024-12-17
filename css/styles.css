@@ -11266,6 +11266,9 @@ section#contact {
 section#contact .section-heading {
   color: #fff;
 }
+section#contact .section-subheading {
+  color: #fff;
+}
 section#contact form#contactForm .form-group {
   margin-bottom: 1.5rem;
 }
