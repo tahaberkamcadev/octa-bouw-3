@@ -58,11 +58,11 @@ window.addEventListener('DOMContentLoaded', event => {
                 fullText.classList.add('d-none');
                 shortText.classList.remove('d-none');
                 if (document.documentElement.lang === 'nl') {
-                    this.textContent = 'Lees minder';
+                    this.textContent = 'Lees meer';
                 } else if (document.documentElement.lang === 'en') {
-                    this.textContent = 'Read less';
+                    this.textContent = 'Read more';
                 } else {
-                    this.textContent = 'Daha az';
+                    this.textContent = 'Devamını oku';
                 }
             }
         });
