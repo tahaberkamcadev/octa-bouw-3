@@ -11363,12 +11363,86 @@ section#contact form#contactForm :-ms-input-placeholder {
   height: auto;
   max-height: 390px;
   object-fit: cover;
+  aspect-ratio: 16 / 12;
 }
 
 .icon {
   height: 50px !important;
   width: auto !important;
 }
+
+.modal-equal-size {
+  /* width: 100%;
+  height: auto;
+  max-height: 390px;
+  object-fit: cover; */
+  aspect-ratio: 16 / 12;
+}
+
+.accordion-button.rounded-circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .btn-primary.rounded-circle {
+      margin-left: 10px;
+  }
+}
+
+
+.nav-language-btn {
+  background: none !important;
+  border: none !important;
+  font-weight: normal !important;
+  padding: 1.25rem 1rem !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.nav-link-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.language-dropdown {
+  position: absolute;
+  background: white;
+  min-width: 120px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu {
+  border: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .nav-language-btn {
+      padding: 1rem !important;
+  }
+  
+  .language-dropdown {
+      position: static;
+      background: none;
+      box-shadow: none;
+  }
+  
+  /* .dropdown-item {
+      color: white;
+  } */
+}
+
+
+
 
 
 

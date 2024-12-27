@@ -47,11 +47,23 @@ window.addEventListener('DOMContentLoaded', event => {
             if (fullText.classList.contains('d-none')) {
                 fullText.classList.remove('d-none');
                 shortText.classList.add('d-none');
-                this.textContent = 'Read Less';
+                if (document.documentElement.lang === 'nl') {
+                    this.textContent = 'Lees minder';
+                } else if (document.documentElement.lang === 'en') {
+                    this.textContent = 'Read less';
+                } else {
+                    this.textContent = 'Daha az';
+                }
             } else {
                 fullText.classList.add('d-none');
                 shortText.classList.remove('d-none');
-                this.textContent = 'Read More';
+                if (document.documentElement.lang === 'nl') {
+                    this.textContent = 'Lees minder';
+                } else if (document.documentElement.lang === 'en') {
+                    this.textContent = 'Read less';
+                } else {
+                    this.textContent = 'Daha az';
+                }
             }
         });
     });
@@ -85,4 +97,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function toggleMobileLanguageMenu() {
+    const menu = document.getElementById('mobileLanguageMenu');
+    if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById('mobileLanguageMenu');
+    const button = event.target.closest('.btn-primary');
+    if (!button && menu.style.display === 'block') {
+        menu.style.display = 'none';
+    }
+});
+
+function handleLanguageClick(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    const navbarCollapse = document.getElementById('navbarResponsive');
+    if (navbarCollapse.classList.contains('show')) {
+        event.stopImmediatePropagation();
+    }
+}
+
+
+document.querySelectorAll('#collapseOne .btn-link').forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+});
+
 
